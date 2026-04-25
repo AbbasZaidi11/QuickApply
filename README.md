@@ -10,11 +10,11 @@ Every job application asks the same questions.
 
 Name. Email. Phone. Current company. Years of experience. LinkedIn. GitHub. Notice period. Expected CTC.
 
-You have typed this a hundred times. Across Workday, Greenhouse, Lever -- each one making you start from scratch.
+You have typed this a hundred times. Across Workday, Greenhouse, Lever each one making you start from scratch.
 
 Browser autofill helps with your name and email. It does not know your notice period. It does not know your current CTC. It does not know your GitHub URL.
 
-Existing tools solve this but they want you to sign up, pick a plan, and suddenly your entire career history -- employer, salary, personal details -- is sitting on someone else's server with newsletters landing in your inbox.
+Existing tools solve this but they want you to sign up, pick a plan, and suddenly your entire career history  employer, salary, personal details  is sitting on someone else's server with newsletters landing in your inbox.
 
 QuickApply solves the same problem without the tradeoff.
 
@@ -135,7 +135,7 @@ quickapply/
 
 - Custom dropdowns that do not use a native `select` element may not fill
 - Iframe-heavy or shadow DOM forms can limit content script access
-- Resume file upload is not supported -- browsers block programmatic file injection by design
+- Resume file upload is not supported  browsers block programmatic file injection by design
 - Match quality depends on the labels and attributes the ATS exposes
 
 ---
