@@ -48,14 +48,17 @@ No server. No account. No emails. No third party. Zero.
 
 ## Installation
 
+```bash
+git clone https://github.com/AbbasZaidi11/QuickApply.git
+cd quickapply
 ```
+
 1. Open Chrome
-2. Go to chrome://extensions
-3. Enable Developer Mode (top right toggle)
-4. Click Load Unpacked
-5. Select the quickapply folder
+2. Go to `chrome://extensions`
+3. Enable **Developer Mode** (top right toggle)
+4. Click **Load Unpacked**
+5. Select the `quickapply` folder
 6. Pin QuickApply from the extensions menu
-```
 
 ---
 
