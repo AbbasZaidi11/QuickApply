@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QuickApply</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">QuickApply</p>
+          <h1>Profile Autofill</h1>
+        </div>
+        <button class="icon-button" id="fillPage" type="button" title="Fill current page" aria-label="Fill current page">
+          <span aria-hidden="true">F</span>
+        </button>
+      </header>
+
+      <form id="profileForm">
+        <section>
+          <h2>Personal</h2>
+          <label>Full Name <input name="fullName" autocomplete="name"></label>
+          <label>Email <input name="email" type="email" autocomplete="email"></label>
+          <label>Phone <input name="phone" type="tel" autocomplete="tel"></label>
+          <label>Country Code <input name="countryCode" autocomplete="tel-country-code"></label>
+        </section>
+
+        <section>
+          <h2>Address</h2>
+          <label>Address Line 1 <input name="addressLine1" autocomplete="address-line1"></label>
+          <label>Address Line 2 <input name="addressLine2" autocomplete="address-line2"></label>
+          <label>Address Line 3 <input name="addressLine3" autocomplete="address-line3"></label>
+          <label>City <input name="city" autocomplete="address-level2"></label>
+          <label>State <input name="state" autocomplete="address-level1"></label>
+          <label>Postal Code <input name="postalCode" autocomplete="postal-code"></label>
+          <label>Country <input name="country" autocomplete="country-name"></label>
+        </section>
+
+        <section>
+          <h2>Professional</h2>
+          <label>Current Company <input name="currentCompany"></label>
+          <label>Job Title <input name="jobTitle"></label>
+          <label>Role Description <textarea name="roleDescription" rows="3"></textarea></label>
+          <label>Years of Experience <input name="yearsOfExperience" type="number" min="0" step="0.5"></label>
+          <label>Skills <textarea name="skills" rows="3"></textarea></label>
+          <label>Message to Hiring Team / CV Note <textarea name="coverLetter" rows="5"></textarea></label>
+        </section>
+
+        <section>
+          <h2>Links</h2>
+          <label>LinkedIn URL <input name="linkedinUrl" type="url"></label>
+          <label>GitHub URL <input name="githubUrl" type="url"></label>
+          <label>Portfolio URL <input name="portfolioUrl" type="url"></label>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <label>Degree <input name="degree"></label>
+          <label>College / University <input name="college"></label>
+          <label>Graduation Year <input name="graduationYear" type="number" min="1900" max="2100"></label>
+          <label>GPA <input name="gpa" type="text"></label>
+        </section>
+
+        <section>
+          <h2>Compensation</h2>
+          <label>Notice Period (days) <input name="noticePeriod" type="number" min="0" step="1"></label>
+          <label>Current CTC <input name="currentCTC"></label>
+          <label>Expected CTC <input name="expectedCTC"></label>
+        </section>
+
+        <div class="actions">
+          <button class="primary" id="saveProfile" type="submit">Save Profile</button>
+          <button id="exportJson" type="button">Export JSON</button>
+          <button id="importJson" type="button">Import JSON</button>
+          <input id="importFile" type="file" accept="application/json,.json" hidden>
+        </div>
+      </form>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
