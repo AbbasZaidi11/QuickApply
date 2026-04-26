@@ -30,10 +30,6 @@ body {
 }
 
 .app-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
   margin-bottom: 14px;
 }
 
@@ -146,17 +142,8 @@ button:hover {
   background: var(--accent-dark);
 }
 
-.icon-button {
-  display: inline-grid;
-  width: 42px;
-  height: 42px;
-  min-height: 42px;
-  place-items: center;
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #fff;
-  font-size: 22px;
-  line-height: 1;
+.wide {
+  grid-column: span 2;
 }
 
 #toast {

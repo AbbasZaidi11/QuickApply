@@ -13,9 +13,6 @@
           <p class="eyebrow">QuickApply</p>
           <h1>Profile Autofill</h1>
         </div>
-        <button class="icon-button" id="fillPage" type="button" title="Fill current page" aria-label="Fill current page">
-          <span aria-hidden="true">F</span>
-        </button>
       </header>
 
       <form id="profileForm">
@@ -71,7 +68,8 @@
         </section>
 
         <div class="actions">
-          <button class="primary" id="saveProfile" type="submit">Save Profile</button>
+          <button class="primary" id="fillPage" type="button">Fill Current Page</button>
+          <button class="wide" id="saveProfile" type="submit">Save Profile</button>
           <button id="exportJson" type="button">Export JSON</button>
           <button id="importJson" type="button">Import JSON</button>
           <input id="importFile" type="file" accept="application/json,.json" hidden>
