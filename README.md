@@ -10,11 +10,11 @@ Every job application asks the same questions.
 
 Name. Email. Phone. Current company. Years of experience. LinkedIn. GitHub. Notice period. Expected CTC.
 
-You have typed this a hundred times. Across Workday, Greenhouse, Lever -- each one making you start from scratch.
+You have typed this a hundred times. Across Workday, Greenhouse, Lever each one making you start from scratch.
 
 Browser autofill helps with your name and email. It does not know your notice period. It does not know your current CTC. It does not know your GitHub URL.
 
-Existing tools solve this but they want you to sign up, pick a plan, and suddenly your entire career history -- employer, salary, personal details -- is sitting on someone else's server with newsletters landing in your inbox.
+Existing tools solve this but they want you to sign up, pick a plan, and suddenly your entire career history  employer, salary, personal details  is sitting on someone else's server with newsletters landing in your inbox.
 
 QuickApply solves the same problem without the tradeoff.
 
@@ -48,14 +48,17 @@ No server. No account. No emails. No third party. Zero.
 
 ## Installation
 
+```bash
+git clone https://github.com/AbbasZaidi11/QuickApply.git
+cd quickapply
 ```
+
 1. Open Chrome
-2. Go to chrome://extensions
-3. Enable Developer Mode (top right toggle)
-4. Click Load Unpacked
-5. Select the quickapply folder
+2. Go to `chrome://extensions`
+3. Enable **Developer Mode** (top right toggle)
+4. Click **Load Unpacked**
+5. Select the `quickapply` folder
 6. Pin QuickApply from the extensions menu
-```
 
 ---
 
@@ -135,7 +138,7 @@ quickapply/
 
 - Custom dropdowns that do not use a native `select` element may not fill
 - Iframe-heavy or shadow DOM forms can limit content script access
-- Resume file upload is not supported -- browsers block programmatic file injection by design
+- Resume file upload is not supported  browsers block programmatic file injection by design
 - Match quality depends on the labels and attributes the ATS exposes
 
 ---
