@@ -74,6 +74,17 @@
       "please indicate your total years of relevant experience",
       "how many years of experience do you have?"
     ],
+    jobChangeReason: [
+      "reason for looking for a new job",
+      "reason for job change",
+      "why are you looking for a new job",
+      "why are you looking to change",
+      "why are you looking for a change",
+      "what is your reason for looking for a new job",
+      "motivation for changing jobs",
+      "reason for leaving",
+      "why do you want to leave your current job"
+    ],
     linkedinUrl: ["linkedin", "linked in", "websites 1"],
     githubUrl: ["github", "git hub", "websites 2"],
     portfolioUrl: [

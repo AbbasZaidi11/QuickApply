@@ -15,6 +15,7 @@ const PROFILE_FIELDS = [
   "jobTitle",
   "roleDescription",
   "yearsOfExperience",
+  "jobChangeReason",
   "coverLetter",
   "linkedinUrl",
   "githubUrl",
