@@ -96,19 +96,41 @@ async function fillPage() {
     return;
   }
 
-  chrome.tabs.sendMessage(tab.id, { type: "FILL_FORM" }, (response) => {
-    if (chrome.runtime.lastError) {
-      showToast("Refresh the page, then try again");
-      return;
-    }
+  try {
+    const results = await chrome.scripting.executeScript({
+      target: { tabId: tab.id, allFrames: true },
+      func: () => {
+        if (typeof window.quickApplyFillCurrentPage !== "function") {
+          return { ok: false, filledCount: 0 };
+        }
 
-    if (!response || !response.ok) {
-      showToast("Could not fill this page");
-      return;
-    }
+        return window.quickApplyFillCurrentPage()
+          .then((result) => ({ ok: true, ...result }))
+          .catch((error) => ({ ok: false, error: error.message, filledCount: 0 }));
+      }
+    });
 
-    showToast(`Filled ${response.filledCount} field${response.filledCount === 1 ? "" : "s"}`);
-  });
+    const filledCount = results.reduce((total, frameResult) => {
+      const result = frameResult.result || {};
+      return total + (result.ok ? result.filledCount || 0 : 0);
+    }, 0);
+
+    showToast(`Filled ${filledCount} field${filledCount === 1 ? "" : "s"}`);
+  } catch (error) {
+    chrome.tabs.sendMessage(tab.id, { type: "FILL_FORM" }, (response) => {
+      if (chrome.runtime.lastError) {
+        showToast("Refresh the page, then try again");
+        return;
+      }
+
+      if (!response || !response.ok) {
+        showToast("Could not fill this page");
+        return;
+      }
+
+      showToast(`Filled ${response.filledCount} field${response.filledCount === 1 ? "" : "s"}`);
+    });
+  }
 }
 
 function readForm() {

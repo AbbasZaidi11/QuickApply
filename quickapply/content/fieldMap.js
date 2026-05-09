@@ -15,15 +15,24 @@
       "legal last name",
       "local family name"
     ],
-    email: ["email", "e-mail", "mail"],
-    phone: ["phone", "mobile", "contact number", "telephone", "cell", "mobile phone number"],
-    countryCode: ["mobile country code", "country code", "country phone code"],
-    addressLine1: ["address line 1", "address1", "street address"],
-    addressLine2: ["address line 2", "address2", "apt", "suite", "apartment"],
+    email: ["email", "e-mail", "mail", "e-mail address", "email address"],
+    phone: [
+      "phone",
+      "mobile",
+      "contact number",
+      "telephone",
+      "cell",
+      "mobile phone number",
+      "primary phone",
+      "home phone"
+    ],
+    countryCode: ["mobile country code", "country code", "country phone code", "phone country"],
+    addressLine1: ["address line 1", "address1", "street address", "address 1"],
+    addressLine2: ["address line 2", "address2", "apt", "suite", "apartment", "address 2"],
     addressLine3: ["address line 3", "address3"],
-    city: ["city", "district", "town", "location", "current location"],
+    city: ["city", "district", "town", "location", "current location", "municipality"],
     state: ["state", "province", "region"],
-    postalCode: ["postal code", "pincode", "pin code", "zip", "zip code"],
+    postalCode: ["postal code", "pincode", "pin code", "zip", "zip code", "postal/zip"],
     country: ["country"],
     currentCompany: [
       "current company",
@@ -45,7 +54,8 @@
       "designation",
       "position",
       "title",
-      "most recent position title"
+      "most recent position title",
+      "current title"
     ],
     roleDescription: ["role description"],
     coverLetter: [
