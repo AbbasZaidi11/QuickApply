@@ -127,9 +127,9 @@ quickapply/
 | Platform | Status |
 |---|---|
 | Workday | ✅ Tested |
-| Greenhouse | 🔄 Not fully tested |
+| Greenhouse | ✅ Tested |
+| iCIMS | ✅ Tested |
 | Lever | 🔄 Not fully tested |
-| iCIMS | 🔄 Not fully tested |
 | Taleo | 🔄 Not fully tested |
 
 ---
